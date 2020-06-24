@@ -21,24 +21,24 @@ function getRandomInteger (minimum, maximum) {
 
 
 
-let s = {name: 'Tony', address: 'Sussex Drive'}
+let s = {name: 'Sam', address: '1385 Woodroffe Ave'}
 
 
 
 // Povided Arrays
-const nouns = ['dragons', 'toasters', 'cars']
+const nouns = ['dragons', 'toasters', 'cars' , 'planes' , 'rocket' , 'microwave' , 'pen' , 'helicopter' , 'zoo' , 'frisbee' ]
 
-const verbs = ['walked', 'ran']
+const verbs = ['walked', 'running' , 'yelled' , 'laughed' , 'slept' , 'rolled' , 'hit' , 'skated' , 'swimming' , 'snored']
 
-const adverbs = ['menacingly', 'intentionally']
+const adverbs = ['menacingly', 'intentionally' , 'abruptly' , 'beautifully' , 'delicately' , 'delightfully' , 'firmly' , 'lightly' , 'truthfully' , 'quickly']
 
-const adjectives = ['wild', 'slippery']
+const adjectives = ['wild', 'slippery' , 'nicer' , 'adorable' , 'gorgeous' , 'breakable' , 'homeless' , 'bald' , 'fancy' , 'flabby' ]
 
-const proNouns = ['they', 'we', 'you', 'he', 'she', 'I', 'it']
+const proNouns = ['they', 'we', 'you', 'he', 'she', 'I', 'it' , 'him' , 'her' , 'me']
 
-const openings = ['Once upon a time', 'I watched']
+const openings = ['Once upon a time', 'I watched' , 'Maybe it was' , 'It has begun' , 'For whom it may concern' , 'Once it was' , 'One hell of a' , 'Hello' , 'Who cares' , 'If' ]
 
-const closings = ['with extra cheese', 'the end']
+const closings = ['with extra cheese', 'the end' , 'In conclusion' , 'Thats why', 'Goodbye' , 'Cookie crumbled' , 'This is why' , 'Au revoir' , 'Enjoy' , 'Ro add it all up']
 
 // Instructions:
 
@@ -108,6 +108,30 @@ const closings = ['with extra cheese', 'the end']
 // Does this function require any parameters: no
 // Does this function need to return anything: yes a new random sentence
 // how do you create a random sentence?
+function createRandomSentence (){
+
+comst randomSentence = openings[ getRandomInteger(0, openings.length - 1)] + ' ' +
+adjectives[getRandomInteger(0, adjectives.length-1)] + ' '
+nouns[getRandomInteger(0, nouns.length - 1)] = ' '
+proNouns[getRandomInteger(0, proNouns.length - 1)] + ' '
+verbs[getRandomInteger(0, verbs.length - 1)] + ' '
+adverbs[getRandomInteger(0, getRandomInteger - 1)] + ' '
+closings[getRandomInteger(0, closings - 1)] + '.'
+return randomSentence
+}
+
+function outputSentence( sentence){
+  console.log(sentence)
+}
+
+const numberOfSentences = 10
+
+for (let i = 0; i<10;i++){
+ // let randomSentence = createRandomSentence()
+ // outputSentence(randomSentence)
+
+  outputSentence(createRandomSentence())
+}
 
 // Create a function that outputs some text
 // Does function require any parameters: yes to text to output
